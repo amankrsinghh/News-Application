@@ -24,7 +24,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-//16b20d9da92a4ae190f3424ceb6103d6
+
 public class news extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -81,7 +81,7 @@ ProgressBar progressBar;
     private void fetchTechnologyNews() {
         progressBar.setVisibility(View.VISIBLE);
         NewsApiService service = ApiClient.getService();
-        Call<NewsResponse> call = service.getEverything("technology", "16b20d9da92a4ae190f3424ceb6103d6");
+        Call<NewsResponse> call = service.getEverything("technology", "");
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
@@ -112,7 +112,7 @@ ProgressBar progressBar;
 private void fetchHealthNews() {
         progressBar.setVisibility(View.VISIBLE);
     NewsApiService service = ApiClient.getService();
-    Call<NewsResponse> call = service.getEverything( "health", "16b20d9da92a4ae190f3424ceb6103d6");
+    Call<NewsResponse> call = service.getEverything( "health", "");
 
     call.enqueue(new Callback<NewsResponse>() {
         @Override
@@ -136,7 +136,7 @@ private void fetchHealthNews() {
     private void fetchEntertainmentNews() {
         progressBar.setVisibility(View.VISIBLE);
         NewsApiService service = ApiClient.getService();
-        Call<NewsResponse> call = service.getEverything( "entertainment", "16b20d9da92a4ae190f3424ceb6103d6");
+        Call<NewsResponse> call = service.getEverything( "entertainment", "");
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
@@ -161,7 +161,7 @@ private void fetchHealthNews() {
     private void fetchBusinessNews() {
         progressBar.setVisibility(View.VISIBLE);
         NewsApiService service = ApiClient.getService();
-        Call<NewsResponse> call = service.getEverything( "business", "16b20d9da92a4ae190f3424ceb6103d6");
+        Call<NewsResponse> call = service.getEverything( "business", "");
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
@@ -187,7 +187,7 @@ private void fetchHealthNews() {
     private void fetchGeneralNews() {
 
         NewsApiService service = ApiClient.getService();
-        Call<NewsResponse> call = service.getEverything( "general", "16b20d9da92a4ae190f3424ceb6103d6");
+        Call<NewsResponse> call = service.getEverything( "general", "");
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
@@ -213,7 +213,7 @@ private void fetchHealthNews() {
     private void fetchScienceNews() {
         progressBar.setVisibility(View.VISIBLE);
         NewsApiService service = ApiClient.getService();
-        Call<NewsResponse> call = service.getEverything( "science", "16b20d9da92a4ae190f3424ceb6103d6");
+        Call<NewsResponse> call = service.getEverything( "science", "");
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
@@ -238,7 +238,7 @@ private void fetchHealthNews() {
     private void fetchSportsNews() {
         progressBar.setVisibility(View.VISIBLE);
         NewsApiService service = ApiClient.getService();
-        Call<NewsResponse> call = service.getEverything( "sports", "16b20d9da92a4ae190f3424ceb6103d6");
+        Call<NewsResponse> call = service.getEverything( "sports", "");
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
