@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,6 +50,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(article.url));
             context.startActivity(intent);
         });
+        Animation animation = AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.entry_anim);
+        holder.itemView.startAnimation(animation);
 
     }
 
